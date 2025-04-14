@@ -1,0 +1,181 @@
+Based on the provided ExpenseMate.pdf, I’ve crafted a detailed prompt that outlines all the features depicted in the document for developing an expense tracking mobile application. The prompt is structured to be clear, comprehensive, and ready for use in guiding app development.
+
+---
+
+**Prompt for Developing an Expense Tracking Mobile Application**
+
+I want to develop a mobile application called "ExpenseMate" for iOS and Android platforms, designed to help users manage their personal finances by tracking expenses, income, budgets, and balances. The app should be user-friendly, intuitive, and feature-rich, incorporating cloud backup and data visualization tools. Below is a detailed description of all required features, based on a reference document, to ensure the app meets modern standards for personal finance management.
+
+### 1. **Core Functionality**
+The app must allow users to log, track, and analyze their financial transactions, including income, expenses, and transfers, with a focus on ease of use and flexibility.
+
+- **Transaction Logging Interface**:
+  - Provide options to add three types of transactions: **Income**, **Expenses**, and **Transfer**.
+  - Include fields for:
+    - **Date**: Allow manual selection or default to the current date (e.g., "19/11/2024 (Tue)").
+    - **Time**: Auto-populate current time but allow editing (e.g., "12:29 PM").
+    - **Category**: Dropdown menu with predefined categories (see below) and an option to add custom categories.
+    - **Account**: Dropdown to select from user-defined accounts (e.g., "Card," "Cash," "Bank").
+    - **Amount**: Numeric input for transaction amount (e.g., "$500").
+    - **Description**: Optional text field for notes (e.g., "Enter Description").
+    - **Invoice**: Option to attach an invoice name or file (e.g., "Select Invoice Name").
+  - Buttons: **Save** to store the transaction and **Continue** to add another transaction immediately.
+  - Display a timestamp or status indicator (e.g., "3:23" for current time).
+
+- **Predefined Expense Categories**:
+  - Include at least the following categories for expense tracking:
+    - Food
+    - Household
+    - Rent
+    - Electricity
+    - LPG Bill
+    - Mobile Recharge
+    - Apparel
+    - Education
+    - Health
+    - Beauty
+    - Transportation
+    - Social Life
+    - Self-development
+    - Entertainment
+  - Allow users to **Add More** custom categories via a dedicated interface.
+
+- **Balance Carry Forward**:
+  - Automatically calculate and display the user’s current balance by subtracting total expenses from total income.
+  - Ensure balances are carried forward across sessions and can be synced with cloud backups.
+
+### 2. **Expense Analysis and Visualization**
+Provide tools for users to analyze their spending patterns with clear, visual representations.
+
+- **Category Pie Chart**:
+  - Generate a pie chart summarizing expenses by category for a selected period (e.g., monthly or custom range).
+  - Display specific amounts for each category (e.g., Travel: $80.00, Electricity: $120.00, Transportation: $105.00, Fuel: $515.00, Shopping: $700.00).
+  - Allow users to tap on segments for detailed breakdowns (e.g., list of transactions in that category).
+  - Support dynamic updates as new transactions are added.
+
+- **Monthly Expenditure Overview**:
+  - Display a summary of financial activity for a selected period (e.g., "Dec 2023 - Nov 2024").
+  - Show:
+    - **Total Income** (e.g., "$24,000.00")
+    - **Total Expenses** (e.g., "$17,109.00")
+    - **Balance** (e.g., "$6,891.00")
+  - Break down data by month (e.g., "Nov-2024: Income $6,000.00, Expenses $3,925.00, Balance $2,075.00").
+  - Provide weekly breakdowns within a month (e.g., "03.11 - 09.11: Expenses $3,160.00").
+  - Include navigation tabs for viewing data in different formats:
+    - **Daily**: List transactions by day.
+    - **Calendar**: Show transactions on a calendar view with totals per day.
+    - **Yearly**: Summarize income, expenses, and balance for the year.
+    - **Budget**: Show budget adherence (see Budgeting section below).
+
+### 3. **Budgeting Tools**
+Enable users to set and track budgets to manage their spending effectively.
+
+- **Budget Setup**:
+  - Allow users to create budgets for specific categories or overall spending for a month (e.g., "Nov-2024: Budget $6,000.00").
+  - Provide fields to set:
+    - Budget amount.
+    - Category (optional, for category-specific budgets).
+    - Time period (e.g., monthly, weekly).
+  - Display budget status:
+    - **Income** (e.g., "$6,000.00").
+    - **Expenses** (e.g., "$4,085.00").
+    - **Remaining Balance** (e.g., "$1,965.00").
+  - Show warnings or alerts when expenses approach or exceed budget limits.
+
+- **Budget Tracking Interface**:
+  - Include a dedicated **Budget** tab in the monthly expenditure view.
+  - Visualize budget progress (e.g., progress bars or percentage indicators).
+  - Allow editing or resetting budgets mid-period.
+
+### 4. **Proof of Transactions**
+Support attaching proof to transactions for accountability and record-keeping.
+
+- **Invoice Attachment**:
+  - Allow users to link invoices to transactions (e.g., "Enter Invoice").
+  - Support attaching files (e.g., PDFs, images) or manually entering invoice details.
+  - Store invoice data securely, linked to the transaction.
+
+- **Transaction Verification**:
+  - Display attached proof in the transaction details view.
+  - Allow users to review or update attached invoices.
+
+### 5. **Cloud Backup and Restore**
+Implement robust cloud-based backup and restore options to ensure data security and portability.
+
+- **Backup Options**:
+  - Integrate with **Google Drive** for cloud backups.
+  - Allow users to select a Google Account for authentication.
+  - Display:
+    - Last backup date.
+    - Backup size.
+  - Include a manual **Backup to Google Drive** button.
+  - Notify users that backups are not automated and recommend regular manual backups to safeguard data in case of device loss or damage.
+
+- **Restore Options**:
+  - Provide a **Restore From Google Drive** feature to retrieve backed-up data.
+  - Allow restoring database files from a specified directory (e.g., files downloaded from email).
+
+- **Export Features**:
+  - Enable exporting backup files to email.
+  - Support exporting daily transaction data as Excel files to email for external record-keeping.
+  - Include a **Help (Backup/Restore)** section with instructions for backup and restore processes.
+
+### 6. **User Interface and Experience**
+Design the app with a clean, modern interface that prioritizes usability.
+
+- **Navigation**:
+  - Use a tabbed interface for quick access to **Income**, **Expenses**, **Transfer**, **Budget**, and **Analysis** sections.
+  - Include a top bar showing the current time (e.g., "5:45") and network status (e.g., Wi-Fi, battery indicators).
+
+- **Visual Design**:
+  - Use a consistent color scheme and typography for readability.
+  - Incorporate icons for categories (e.g., fork and knife for Food, car for Transportation).
+  - Ensure charts (e.g., pie chart) are colorful and interactive.
+
+- **Accessibility**:
+  - Support light and dark modes.
+  - Ensure compatibility with screen readers and large text options.
+
+### 7. **Additional Features**
+Enhance the app with practical tools for advanced users.
+
+- **Multi-Account Support**:
+  - Allow users to manage multiple accounts (e.g., "Card," "Cash," "Savings").
+  - Enable transfers between accounts with clear tracking.
+
+- **Data Export**:
+  - Beyond email exports, support exporting data to CSV or PDF formats for local storage.
+  - Allow filtering exports by date range, category, or account.
+
+- **Notifications**:
+  - Send reminders for regular backups.
+  - Notify users when budgets are nearing limits or when large transactions are logged.
+
+- **Security**:
+  - Implement local encryption for sensitive data (e.g., transaction amounts, account details).
+  - Require authentication (e.g., PIN, biometric) for app access if enabled by the user.
+
+### 8. **Technical Requirements**
+- **Platforms**: Develop for iOS (version 14.0+) and Android (version 9.0+).
+- **Offline Mode**: Allow full functionality offline, with data syncing to the cloud when internet is available.
+- **Database**: Use a secure, local database (e.g., SQLite) for transaction storage, with cloud sync via Google Drive APIs.
+- **Performance**: Ensure the app loads quickly and handles large datasets (e.g., years of transactions) efficiently.
+- **Localization**: Support multiple languages and currency formats based on user location.
+
+### 9. **Deliverables**
+- Fully functional mobile app with all features described above.
+- Source code with documentation for future maintenance.
+- User guide or in-app help section covering all features, especially backup/restore.
+- Test cases to ensure reliability of transaction logging, cloud sync, and data visualization.
+
+### 10. **Optional Enhancements**
+Consider these features to make the app stand out:
+- Integration with bank accounts or payment apps (e.g., PayPal, Venmo) for automatic transaction imports (subject to API availability).
+- AI-driven insights suggesting savings opportunities based on spending patterns.
+- Gamification features, such as rewards for staying within budget.
+
+Please provide a development plan, including timeline, tech stack recommendations (e.g., React Native for cross-platform, Firebase for cloud integration), and any clarifications needed to proceed with building ExpenseMate.
+
+---
+
+This prompt captures every feature from the ExpenseMate.pdf, including transaction logging, category management, budgeting, data visualization, cloud backup, and UI elements, while structuring them into a clear directive for app development. Let me know if you need adjustments or additional details!
