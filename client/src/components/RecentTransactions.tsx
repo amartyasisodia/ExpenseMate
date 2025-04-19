@@ -88,8 +88,8 @@ export default function RecentTransactions({ isLoading, transactions }: RecentTr
     <Card className="bg-white rounded-lg shadow">
       <div className="p-4 border-b border-gray-200 flex justify-between items-center">
         <h2 className="text-lg font-semibold text-gray-800">Recent Transactions</h2>
-        <Link to="/transactions">
-          <a className="text-sm text-accent hover:text-blue-700">View All</a>
+        <Link to="/transactions" className="text-sm text-accent hover:text-blue-700">
+          View All
         </Link>
       </div>
       <div className="divide-y divide-gray-200">

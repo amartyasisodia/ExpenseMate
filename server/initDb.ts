@@ -122,11 +122,11 @@ async function initDbSchema() {
       threeWeeksAgo.setDate(threeWeeksAgo.getDate() - 21);
       
       // Get category IDs
-      const categoryList = await db.select().from(categories).where(eq => eq.userId === defaultUser.id);
-      const foodCategory = categoryList.find(c => c.name === 'Food')?.id;
-      const transportCategory = categoryList.find(c => c.name === 'Transportation')?.id;
-      const entertainmentCategory = categoryList.find(c => c.name === 'Entertainment')?.id;
-      const utilityCategory = categoryList.find(c => c.name === 'Utilities')?.id;
+      const categoryList = await db.select().from(categories);
+      const foodCategory = categoryList.find(c => c.name === 'Food' && c.userId === defaultUser.id)?.id;
+      const transportCategory = categoryList.find(c => c.name === 'Transportation' && c.userId === defaultUser.id)?.id;
+      const entertainmentCategory = categoryList.find(c => c.name === 'Entertainment' && c.userId === defaultUser.id)?.id;
+      const utilityCategory = categoryList.find(c => c.name === 'Utilities' && c.userId === defaultUser.id)?.id;
       
       // Sample transactions
       await db.insert(transactions).values([

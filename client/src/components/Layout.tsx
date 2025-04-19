@@ -49,30 +49,20 @@ export default function Layout({ children, currentPath, onAddTransaction }: Layo
       {/* Tab Navigation */}
       <div className="bg-white border-b border-gray-200">
         <nav className="flex justify-between px-4 overflow-x-auto">
-          <Link to="/">
-            <a className={`px-3 py-4 text-sm font-medium ${currentPath === '/' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}>
-              Dashboard
-            </a>
+          <Link to="/" className={`px-3 py-4 text-sm font-medium ${currentPath === '/' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}>
+            Dashboard
           </Link>
-          <Link to="/transactions">
-            <a className={`px-3 py-4 text-sm font-medium ${currentPath === '/transactions' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}>
-              Transactions
-            </a>
+          <Link to="/transactions" className={`px-3 py-4 text-sm font-medium ${currentPath === '/transactions' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}>
+            Transactions
           </Link>
-          <Link to="/budget">
-            <a className={`px-3 py-4 text-sm font-medium ${currentPath === '/budget' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}>
-              Budget
-            </a>
+          <Link to="/budget" className={`px-3 py-4 text-sm font-medium ${currentPath === '/budget' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}>
+            Budget
           </Link>
-          <Link to="/analysis">
-            <a className={`px-3 py-4 text-sm font-medium ${currentPath === '/analysis' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}>
-              Analysis
-            </a>
+          <Link to="/analysis" className={`px-3 py-4 text-sm font-medium ${currentPath === '/analysis' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}>
+            Analysis
           </Link>
-          <Link to="/accounts">
-            <a className={`px-3 py-4 text-sm font-medium ${currentPath === '/accounts' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}>
-              Accounts
-            </a>
+          <Link to="/accounts" className={`px-3 py-4 text-sm font-medium ${currentPath === '/accounts' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-gray-700'}`}>
+            Accounts
           </Link>
         </nav>
       </div>
